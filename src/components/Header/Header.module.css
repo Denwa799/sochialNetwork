@@ -1,15 +1,6 @@
-/*
-colors:
-#003B46  глубоая вода
-#07557B  океан
-#66A5AD  волна
-#C4DFEG  морская пена
- */
-
-
 .header {
     grid-area: h;
-    background-color: green;
+    background-color: #265077;
 }
 
 .header img {

@@ -4,7 +4,6 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 
-
 const Dialogs = (props) => {
 
     let dialogsElements = props.dialogs.map(dialog => <DialogItem name={dialog.name}
@@ -32,19 +31,17 @@ const Dialogs = (props) => {
                 {dialogsElements}
             </div>
             <div className={classes.messages}>
-                <div className={classes.firstMessage}>
+                <div className={classes.messageDialogs}>
                     {messagesElements}
                     <div>
-                        <div>
-                            <textarea placeholder="Enter your message" onChange={onMessageChange} ref={newMessageElement} value={props.newMessageBody}/>
+                        <div className={classes.textArea}>
+                            <textarea placeholder="Enter your message" onChange={onMessageChange}
+                                      ref={newMessageElement} value={props.newMessageBody}/>
                         </div>
                         <div>
                             <button onClick={sendMessage}>Отправить сообщение</button>
                         </div>
                     </div>
-                </div>
-                <div className={classes.SecondMessage}>
-                    {messagesElements}
                 </div>
             </div>
         </div>

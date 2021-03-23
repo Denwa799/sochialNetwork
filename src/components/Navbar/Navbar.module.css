@@ -1,6 +1,5 @@
 .navbar {
     grid-area: n;
-    background-color: burlywood;
     padding: 20px;
     font-size: 20px;
 }
@@ -11,11 +10,11 @@
 }
 
 .item a.activeLink {
-    color: gold;
+    color: #494B68;
 }
 
 .friends {
-    color: white;
+    color: #fff;
     padding-top: 50px;
     font-size: 30px;
 }

@@ -1,9 +1,19 @@
 .photosLarge {
-    width: 100%;
-    height: 500px;
+    width: 50%;
+    height: 250px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+.dontPhoto{
+    padding: 10px;
 }
 
 .descriptionBlog {
-    padding: 10px;
+    padding-right: 50px;
+    float: right;
+}
+
+.descriptionText {
+    padding-top: 5px;
 }

@@ -1,3 +1,19 @@
+/*
+EPIC
+colors:
+#265077
+#022140
+#494B68
+#1E4258
+#2D5F5D
+ */
+
+.background {
+    background-color: #022140;
+    min-height: 100vh;
+    color:#FFF;
+}
+
 .app-wrapper {
     display: grid;
     width: 1200px;
@@ -12,5 +28,7 @@
 
 .app-wrapper-content {
     grid-area: c;
-    background-color: cornflowerblue;
+    background-color: #022f58;
+    box-shadow: 0 0 10px #494B68;
+    width: 70%;
 }
