@@ -20,7 +20,7 @@ const ProfileInfo = (props) => {
                     <div className={classes.descriptionText}>
                         <h1>{props.profile.fullName}</h1>
                     </div>
-                    <ProfileStatus status={"Hello world!"}/>
+                    <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                     <div className={classes.descriptionText}>
                         Обо мне: {props.profile.aboutMe ? props.profile.aboutMe : "Нет информации"}
                     </div>
