@@ -26,7 +26,6 @@ const Login = (props) => {
     const onSubmit = (formData) => {
         console.log("Submit");
     }
-
     return <div>
         <h1>
             Login
