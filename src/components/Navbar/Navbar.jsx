@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './Navbar.module.css';
+import styles from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import FriendItem from "./FriendItem/FriendItem";
 
@@ -11,28 +11,28 @@ const Navbar = (props) => {
                                                                   img={friend.img}/>);
 
     return (
-        <nav className={classes.navbar}>
-            <div className={classes.item}>
-                <NavLink to="/profile" activeClassName={classes.activeLink}>Profile</NavLink>
+        <nav className={styles.navbar}>
+            <div className={styles.item}>
+                <NavLink to="/profile" activeClassName={styles.activeLink}>Profile</NavLink>
             </div>
-            <div className={`${classes.item} ${classes.active}`}>
-                <NavLink to="/dialogs" activeClassName={classes.activeLink}>Messages</NavLink>
+            <div className={`${styles.item} ${styles.active}`}>
+                <NavLink to="/dialogs" activeClassName={styles.activeLink}>Messages</NavLink>
             </div>
-            <div className={`${classes.item} ${classes.active}`}>
-                <NavLink to="/users" activeClassName={classes.activeLink}>Users</NavLink>
+            <div className={`${styles.item} ${styles.active}`}>
+                <NavLink to="/users" activeClassName={styles.activeLink}>Users</NavLink>
             </div>
-            <div className={classes.item}>
-                <NavLink to="/news" activeClassName={classes.activeLink}>News</NavLink>
+            <div className={styles.item}>
+                <NavLink to="/news" activeClassName={styles.activeLink}>News</NavLink>
             </div>
-            <div className={classes.item}>
-                <NavLink to="/music" activeClassName={classes.activeLink}>Music</NavLink>
+            <div className={styles.item}>
+                <NavLink to="/music" activeClassName={styles.activeLink}>Music</NavLink>
             </div>
-            <div className={classes.item}>
-                <NavLink to="/settings" activeClassName={classes.activeLink}>Settings</NavLink>
+            <div className={styles.item}>
+                <NavLink to="/settings" activeClassName={styles.activeLink}>Settings</NavLink>
             </div>
-            <div className={classes.friends}>
+            <div className={styles.friends}>
                 Friends
-                <div className={classes.friendItem}>
+                <div className={styles.friendItem}>
                     {friendsElements}
                 </div>
             </div>

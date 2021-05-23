@@ -1,10 +1,10 @@
 import React from "react";
-import classes from "./Forms.Controls.module.css"
+import styles from "./Forms.Controls.module.css"
 
 const FormControl = ({input, meta, child, ...props}) => {
     const hasError = meta.touched && meta.error;
     return (
-        <div className={classes.formControl + " " + (hasError ? classes.error : "")}>
+        <div className={styles.formControl + " " + (hasError ? styles.error : "")}>
             <div>
                 {props.children}
             </div>

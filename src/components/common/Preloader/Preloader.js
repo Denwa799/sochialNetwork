@@ -1,10 +1,10 @@
 import preloader from "../../../assets/images/loader.svg";
 import React from "react";
-import classes from './Preloader.module.css'
+import styles from './Preloader.module.css'
 
 const Preloader = (props) => {
     return <div>
-        <img className={classes.preloader} src={preloader} alt="Preloader"/>
+        <img className={styles.preloader} src={preloader} alt="Preloader"/>
     </div>
 }
 

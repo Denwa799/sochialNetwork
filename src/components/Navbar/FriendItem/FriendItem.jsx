@@ -1,11 +1,11 @@
 import React from "react";
-import classes from './../Navbar.module.css';
+import styles from './../Navbar.module.css';
 
 const FriendItem = (props) => {
 
     return (
-        <div className={classes.friend}>
-            <img src={props.img}/>
+        <div className={styles.friend}>
+            <img src={props.img} alt="Friend"/>
             <span>{props.name}</span>
         </div>
     );
