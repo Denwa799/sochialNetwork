@@ -12,19 +12,19 @@ export const usersAPI = {
     getUsers(currentPage = 1, pageSize = 10) {
         return instance.get(`users?page=${currentPage}&count=${pageSize}`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     follow(id) {
         return instance.post(`follow/${id}`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     unfollow(id) {
         return instance.delete(`follow/${id}`)
             .then(response => {
-                return response.data;
+                return response;
             });
     }
 }
@@ -33,19 +33,19 @@ export const profileAPI = {
     getProfile(userId) {
         return instance.get(`profile/${userId}`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     getStatus(userId) {
         return instance.get(`profile/status/${userId}`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     updateStatus(status) {
         return instance.put(`profile/status`, {status})
             .then(response => {
-                return response.data;
+                return response;
             });
     }
 }
@@ -54,19 +54,19 @@ export const authAPI = {
     me() {
         return instance.get(`auth/me`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     login(email, password, rememberMe = false) {
         return instance.post(`auth/login`, {email, password, rememberMe})
             .then(response => {
-                return response.data;
+                return response;
             });
     },
     logout() {
         return instance.delete(`auth/login`)
             .then(response => {
-                return response.data;
+                return response;
             });
     },
 }
