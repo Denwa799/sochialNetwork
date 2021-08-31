@@ -1,22 +1,28 @@
 import React from "react";
 import styles from "./ProfileInfo.module.css";
 import Preloader from "../../common/Preloader/Preloader";
-//import ProfileStatus from "./ProfileStatus";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import userPhoto from "../../../assets/images/user.png";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
         return <Preloader/>
     }
+
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            props.savePhoto(e.target.files[0]);
+        }
+    }
+
     return (
         <div>
             <div>
-                {props.profile.photos.large ?
-                    <img className={styles.photosLarge} src={props.profile.photos.large} alt=""/> :
-                    <span className={styles.dontPhoto}>Фотография отсутствует</span>}
+                <img className={styles.mainPhoto} src={props.profile.photos.large || userPhoto} alt=""/>
+                {props.isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
                 {/*<img
-                    src="https://demotivation.ru/wp-content/uploads/2020/01/Canada_Parks_Lake_Mountains_Forests_Scenery_Rocky_567540_3840x2400-scaled.jpg"
-                    alt=""/>*/}
+                src="https://demotivation.ru/wp-content/uploads/2020/01/Canada_Parks_Lake_Mountains_Forests_Scenery_Rocky_567540_3840x2400-scaled.jpg"
+                alt=""/>*/}
                 <div className={styles.descriptionBlog}>
                     <div className={styles.descriptionText}>
                         <h1>{props.profile.fullName}</h1>
