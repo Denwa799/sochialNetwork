@@ -57,6 +57,12 @@ export const profileAPI = {
                 'Content-Type': 'multipart/form-data'
             }
         });
+    },
+    saveProfile(profile) {
+        return instance.put(`profile`, profile)
+            .then(response => {
+                return response;
+            });
     }
 }
 
@@ -67,14 +73,23 @@ export const authAPI = {
                 return response;
             });
     },
-    login(email, password, rememberMe = false) {
-        return instance.post(`auth/login`, {email, password, rememberMe})
+    login(email, password, rememberMe = false, captcha = null) {
+        return instance.post(`auth/login`, {email, password, rememberMe, captcha})
             .then(response => {
                 return response;
             });
     },
     logout() {
         return instance.delete(`auth/login`)
+            .then(response => {
+                return response;
+            });
+    },
+}
+
+export const securityAPI = {
+    getCaptchaUrl() {
+        return instance.get(`security/get-captcha-url`)
             .then(response => {
                 return response;
             });
